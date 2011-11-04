@@ -55,6 +55,7 @@ which now loads realscripts by default.
 #- source
 %doc %{_texmfdistdir}/source/latex/realscripts/realscripts.dtx
 %doc %{_texmfdistdir}/source/latex/realscripts/realscripts.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,3 +66,5 @@ which now loads realscripts by default.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
