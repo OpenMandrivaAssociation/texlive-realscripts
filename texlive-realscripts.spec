@@ -6,7 +6,7 @@
 # catalog-version 0.3
 Name:		texlive-realscripts
 Version:	0.3
-Release:	1
+Release:	2
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
