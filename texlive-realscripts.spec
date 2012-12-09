@@ -55,3 +55,17 @@ which now loads realscripts by default.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3-2
++ Revision: 755633
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3-1
++ Revision: 719436
+- texlive-realscripts
+- texlive-realscripts
+- texlive-realscripts
+- texlive-realscripts
+
