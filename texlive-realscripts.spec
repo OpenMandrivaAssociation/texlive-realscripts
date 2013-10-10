@@ -1,12 +1,12 @@
-# revision 19976
+# revision 29423
 # category Package
 # catalog-ctan /macros/latex/contrib/realscripts
-# catalog-date 2010-09-30 22:08:28 +0200
+# catalog-date 2013-02-27 17:45:34 +0100
 # catalog-license lppl1.3
-# catalog-version 0.3
+# catalog-version 0.3b
 Name:		texlive-realscripts
-Version:	0.3
-Release:	2
+Version:	0.3b
+Release:	1
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
@@ -55,17 +55,3 @@ which now loads realscripts by default.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3-2
-+ Revision: 755633
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3-1
-+ Revision: 719436
-- texlive-realscripts
-- texlive-realscripts
-- texlive-realscripts
-- texlive-realscripts
-
