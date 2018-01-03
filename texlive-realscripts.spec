@@ -1,12 +1,6 @@
-# revision 29423
-# category Package
-# catalog-ctan /macros/latex/contrib/realscripts
-# catalog-date 2013-02-27 17:45:34 +0100
-# catalog-license lppl1.3
-# catalog-version 0.3b
 Name:		texlive-realscripts
-Version:	0.3b
-Release:	9
+Version:	0.3d
+Release:	1
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
@@ -39,12 +33,10 @@ which now loads realscripts by default.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/realscripts/realscripts.sty
-%doc %{_texmfdistdir}/doc/latex/realscripts/README
-%doc %{_texmfdistdir}/doc/latex/realscripts/realscripts.pdf
+%{_texmfdistdir}/tex/latex/realscripts
+%doc %{_texmfdistdir}/doc/latex/realscripts
 #- source
-%doc %{_texmfdistdir}/source/latex/realscripts/realscripts.dtx
-%doc %{_texmfdistdir}/source/latex/realscripts/realscripts.ins
+%doc %{_texmfdistdir}/source/latex/realscripts
 
 #-----------------------------------------------------------------------
 %prep
