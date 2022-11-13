@@ -1,13 +1,13 @@
 Name:		texlive-realscripts
-Version:	0.3d
-Release:	2
+Version:	56594
+Release:	1
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +24,12 @@ holds functions that were once parts of the xltxtra package,
 which now loads realscripts by default.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -40,7 +40,8 @@ which now loads realscripts by default.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
