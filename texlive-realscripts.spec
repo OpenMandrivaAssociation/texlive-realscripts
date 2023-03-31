@@ -1,6 +1,6 @@
 Name:		texlive-realscripts
 Version:	56594
-Release:	1
+Release:	2
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
