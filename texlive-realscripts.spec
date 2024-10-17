@@ -3,7 +3,7 @@ Version:	56594
 Release:	2
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.doc.r%{version}.tar.xz
