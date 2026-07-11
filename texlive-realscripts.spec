@@ -1,50 +1,27 @@
-Name:		texlive-realscripts
-Version:	56594
-Release:	2
+%global tl_name realscripts
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.3d
+Release:	%{tl_revision}.1
 Summary:	Access OpenType subscript and superscript glyphs
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/realscripts
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/unicodetex/latex/realscripts
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/realscripts.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This small package replaces \textsuperscript and \textsubscript
-commands by equivalent commands that use OpenType font features
-to access appropriate glyphs if possible. The package also
-patches LaTeX's default footnote command to use this new
-\textsuperscript for footnote symbols. The package requires
-fontspec running on either XeLaTeX or LuaLaTeX. The package
-holds functions that were once parts of the xltxtra package,
+This small package replaces \textsuperscript and \textsubscript commands
+by equivalent commands that use OpenType font features to access
+appropriate glyphs if possible. The package also patches LaTeX's default
+footnote command to use this new \textsuperscript for footnote symbols.
+The package requires fontspec running on either XeLaTeX or LuaLaTeX. The
+package holds functions that were once parts of the xltxtra package,
 which now loads realscripts by default.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/realscripts
-%doc %{_texmfdistdir}/doc/latex/realscripts
-#- source
-%doc %{_texmfdistdir}/source/latex/realscripts
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
